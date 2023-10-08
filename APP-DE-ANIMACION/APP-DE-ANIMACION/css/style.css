@@ -75,21 +75,36 @@ nav a:hover{
   align-items: center;
 }
 
+@keyframes backcolor {
+  0% {
+    background-color:rgb(255, 146, 240);
+  }
+  50%{
+    background-color: rgb(238, 0, 255);
+  }
+  100% {
+    background-color:rgb(255, 138, 239);
+  }
+}
+
 #funciones {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: transparent;
+  animation: backcolor 5s linear infinite;
 }
 
-.titulo-funciones {
-  top: 115%;
-  position: absolute;
-  font-size: 50px;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.agrandar{
+  transition: ease 0.5s;
+}
+
+.agrandar:hover{
+  cursor:default;
+  color: aquamarine;
+  font-size: 100px;
 }
 
 #precios {
@@ -101,9 +116,9 @@ nav a:hover{
   background-color: greenyellow;
 }
 
-.titulo-precios {
-  top: 220%;
-  position: absolute;
+.titulosSecundarios {
+  text-align: center;
+  width: 100%;
   font-size: 50px;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
