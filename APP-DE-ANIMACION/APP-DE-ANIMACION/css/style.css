@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+ 
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.titulo {
+  font-family: 'Autour One', cursive;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.logo {
+  margin-left: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+  width: 35px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+nav a{
+  color: white;
+  font-size: 20px;
+  margin-right: 40px;
+  padding: 5px;
+  transition: ease 0.5s;
+}
+
+nav a:hover{
+  border-bottom: 4px solid rgb(255, 255, 255);
+}
+
+.texto-principal {
+  color: white;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+
+#section-1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#funciones {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.titulo-funciones {
+  top: 115%;
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#precios {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+}
+
+.titulo-precios {
+  top: 220%;
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid gainsboro;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: gainsboro;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div{
+  border: 2px solid gainsboro;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: gainsboro;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: gainsboro;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: gainsboro;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: gainsboro;
+}
